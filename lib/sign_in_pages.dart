@@ -372,12 +372,12 @@ class _LoginScreenState extends State<LoginScreen>
     } on FirebaseAuthException catch (e) {
       if (e.code == "user-not-found") {
         showDialog(
-          context: context,
-          builder: (context) {
-            return const AlertDialog(
-              content: Text("Check Username and Password"),
-            );
-          });
+            context: context,
+            builder: (context) {
+              return const AlertDialog(
+                content: Text("Check Username and Password"),
+              );
+            });
       }
     }
 
@@ -397,20 +397,14 @@ class _LoginScreenState extends State<LoginScreen>
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                "App Title",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const Text(
-                "Login To APPNAME",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
+              const Center(
+                child: Text(
+                  "Login To Maternity Care",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(

@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -201,7 +200,7 @@ class DashboardPage extends StatelessWidget {
                     Container(
                       child: userData.due
                           ? const Center(
-                            child:  Text(
+                              child: Text(
                                 "DUE",
                                 style: TextStyle(
                                   color: Colors.blueAccent,
@@ -209,12 +208,15 @@ class DashboardPage extends StatelessWidget {
                                   fontSize: 40,
                                 ),
                               ),
-                          )
-                          : const Text(
-                              "NOT DUE",
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontWeight: FontWeight.bold,
+                            )
+                          : const Center(
+                              child: Text(
+                                "NOT DUE",
+                                style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 40,
+                                ),
                               ),
                             ),
                     ),
@@ -603,8 +605,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                     Usermodel userData = snapshot.data as Usermodel;
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        const SizedBox(height: 100,),
                         const Center(
                           child: Text(
                             "PROFILE",
@@ -634,13 +637,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                             Text(
                               userData.email,
                               style: const TextStyle(
-                                color: Colors.blueAccent,
+                                color: Colors.deepPurpleAccent,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
+
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+
 
                         //First_name
                         Row(
@@ -656,12 +664,16 @@ class _ProfileScreenState extends State<ProfileScreen>
                             Text(
                               userData.firstname,
                               style: const TextStyle(
-                                color: Colors.blueAccent,
+                                color: Colors.deepPurpleAccent,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
+                        ),
+
+                        const SizedBox(
+                          height: 20.0,
                         ),
 
                         //Last_name
@@ -678,12 +690,16 @@ class _ProfileScreenState extends State<ProfileScreen>
                             Text(
                               userData.lastname,
                               style: const TextStyle(
-                                color: Colors.blueAccent,
+                                color: Colors.deepPurpleAccent,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
+                        ),
+
+                        const SizedBox(
+                          height: 20.0,
                         ),
 
                         //Age
@@ -700,12 +716,16 @@ class _ProfileScreenState extends State<ProfileScreen>
                             Text(
                               userData.age.toString(),
                               style: const TextStyle(
-                                color: Colors.blueAccent,
+                                color: Colors.deepPurpleAccent,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
+                        ),
+
+                        const SizedBox(
+                          height: 20.0,
                         ),
 
                         //Current week
@@ -722,7 +742,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                             Text(
                               userData.week.toString(),
                               style: const TextStyle(
-                                color: Colors.blueAccent,
+                                color: Colors.deepPurpleAccent,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -734,10 +754,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                           height: 26.0,
                         ),
 
-                        const SizedBox(
-                          height: 26.0,
-                        ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Center(
                                 child: MaterialButton(
@@ -749,7 +768,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                             const GotoEditPage()));
                               },
                               color: Colors.blueAccent,
-                              child: const Icon(CupertinoIcons.pencil_outline),
+                              child: const Icon(Icons.edit),
                             )),
                             Center(
                               child: MaterialButton(
@@ -912,14 +931,12 @@ class _GotoEditPageState extends State<GotoEditPage>
                                 width: double.infinity,
                                 child: ElevatedButton(
                                     onPressed: () {
-                                      final bool due1 = userData.due;
-                                      if (int.parse(currentweek1.text.trim()) >
-                                          30) {
-                                        const bool due1 = true;
-                                      } else {
-                                        const bool due1 = false;
-                                      }
+                                      bool due1 = userData.due;
+                                      int.parse(currentweek1.text.trim()) > 30
+                                          ? due1 = true
+                                          : due1 = false;
                                       final userData1 = Usermodel(
+                                          id: userData.id,
                                           age: int.parse(age1.text.trim()),
                                           email: userData.email,
                                           firstname: firstname1.text.trim(),
