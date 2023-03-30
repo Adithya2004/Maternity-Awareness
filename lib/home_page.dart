@@ -194,7 +194,30 @@ class DashboardPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Container(
+                      child: userData.due
+                          ? const Center(
+                            child:  Text(
+                                "DUE",
+                                style: TextStyle(
+                                  color: Colors.blueAccent,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 40,
+                                ),
+                              ),
+                          )
+                          : const Text(
+                              "NOT DUE",
+                              style: TextStyle(
+                                color: Colors.blueAccent,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                    ),
                   ],
                 );
               } else if (snapshot.hasError) {
@@ -267,42 +290,266 @@ class ExercisePage extends StatelessWidget {
 class NutritionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Text(
-            'Month-wise Food Chart:',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 8),
-          Text(
-            'Eating a balanced and nutritious diet is important during pregnancy to support the growth and development of the baby. Here is a month-wise food chart to follow:',
-            style: TextStyle(fontSize: 18),
-          ),
-          SizedBox(height: 16),
-          Text(
-            'First Trimester (Months 1-3):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 8),
-//           Image.asset('assets/nutrition/first_trimester.png'),
-          SizedBox(height: 16),
-          Text(
-            'Second Trimester (Months 4-6):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 8),
-//           Image.asset('assets/nutrition/second_trimester.png'),
-          SizedBox(height: 16),
-          Text(
-            'Third Trimester (Months 7-9):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 8),
-//           Image.asset('assets/nutrition/third_trimester.png'),
-        ],
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 252, 152, 185),
+      resizeToAvoidBottomInset: false,
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text(
+              'Month-wise Food Chart:',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 8),
+            Text(
+              'Eating a balanced and nutritious diet is important during pregnancy to support the growth and development of the baby. Here is a month-wise food chart to follow:',
+              style: TextStyle(fontSize: 18),
+            ),
+            SizedBox(height: 16),
+            Text(
+              'First Trimester (Months 1-3):',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text("Monday"),
+            SizedBox(height: 4),
+            Text("Breakfast: Greek yogurt with mixed berries and granola"),
+            Text("Snack: Apple slices with almond butter"),
+            Text(
+                "Lunch: Grilled chicken salad with mixed greens, avocado, and a vinaigrette dressing"),
+            Text("Snack: Trail mix with nuts and dried fruit"),
+            Text(
+                "Dinner: Baked salmon with roasted sweet potatoes and steamed broccoli"),
+            SizedBox(height: 8),
+            Text("Tuesday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Scrambled eggs with spinach and whole grain toast, and a glass of orange juice"),
+            Text("Snack: Baby carrots with hummus"),
+            Text(
+                "Lunch: Grilled chicken wrap with lettuce, tomato, avocado, and a side of fruit salad"),
+            Text("Snack: Greek yogurt with sliced banana and honey"),
+            Text("Dinner: Vegetarian chili with cornbread and a side salad"),
+            SizedBox(height: 8),
+            Text("Wednesday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole grain waffles with fresh fruit and a dollop of whipped cream, and a glass of milk"),
+            Text("Snack: Cheese and whole grain crackers"),
+            Text(
+                "Lunch: Quinoa salad with chickpeas, cucumber, tomatoes, and a lemon vinaigrette dressing"),
+            Text("Snack: Banana with almond butter"),
+            Text(
+                "Dinner: Baked chicken with roasted Brussels sprouts and a baked sweet potato"),
+            SizedBox(height: 8),
+            Text("Thursday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Greek yogurt parfait with granola and mixed berries, and a glass of orange juice"),
+            Text("Snack: Popcorn and a piece of fruit"),
+            Text("Lunch: Grilled salmon with brown rice and roasted asparagus"),
+            Text(
+                "Snack: Smoothie with mixed berries, spinach, and Greek yogurt"),
+            Text(
+                "Dinner: Baked sweet potato with black beans, salsa, and a side salad"),
+            SizedBox(height: 8),
+            Text("Friday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Breakfast burrito with scrambled eggs, black beans, avocado, and salsa, and a glass of milk"),
+            Text("Snack: Energy balls with dates and nuts"),
+            Text(
+                "Lunch: Turkey and cheese sandwich on whole grain bread with a side of raw veggies and hummus"),
+            Text("Snack: Apple slices with cheese"),
+            Text("Dinner: Spaghetti squash with meat sauce and a side salad"),
+            SizedBox(height: 8),
+            Text("Saturday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Blueberry pancakes with a side of scrambled eggs and a glass of orange juice"),
+            Text("Snack: Greek yogurt with mixed berries and granola"),
+            Text("Lunch: Turkey and avocado wrap with a side of fruit salad"),
+            Text("Snack: Trail mix with dried fruit and nuts"),
+            Text("Dinner: Beef stir-fry with mixed vegetables and brown rice"),
+            SizedBox(height: 8),
+            Text("Sunday"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Veggie omelet with a side of whole grain toast and a glass of milk"),
+            Text("Snack: Baby carrots with hummus"),
+            Text(
+                "Lunch: Grilled chicken Caesar salad with a side of garlic bread"),
+            Text("Snack: Cottage cheese with mixed berries"),
+            Text("Dinner: Lentil soup with a side salad and whole grain bread"),
+            SizedBox(height: 16),
+            Text(
+                "Remember to drink plenty of water throughout the day to stay hydrated, and talk to your healthcare provider about any dietary concerns or restrictions you may have"),
+            //           Image.asset('assets/nutrition/first_trimester.png'),
+            SizedBox(height: 16),
+
+            Text(
+              'Second Trimester (Months 4-6):',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Text("Monday:"),
+            SizedBox(height: 4),
+
+            Text("Breakfast: Oatmeal with sliced banana and almonds"),
+            Text("Snack: Greek yogurt with berries"),
+            Text(
+                "Lunch: Grilled chicken salad with mixed greens, avocado, and cherry tomatoes"),
+            Text("Snack: Apple slices with almond butter"),
+            Text("Dinner: Grilled salmon with quinoa and roasted vegetables"),
+            SizedBox(height: 8),
+            Text("Tuesday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Scrambled eggs with spinach and whole-grain toast"),
+            Text("Snack: Hummus with carrot sticks"),
+            Text(
+                "Lunch: Turkey sandwich on whole-grain bread with sliced cucumber and tomato"),
+            Text("Snack: Pear slices with cheese"),
+            Text("Dinner: Vegetarian chili with brown rice"),
+            SizedBox(height: 8),
+            Text("Wednesday:"),
+            SizedBox(height: 4),
+            Text("Breakfast: Greek yogurt with granola and mixed berries"),
+            Text("Snack: Hard-boiled egg"),
+            Text(
+                "Lunch: Grilled chicken wrap with mixed greens, hummus, and roasted peppers"),
+            Text("Snack: Banana with peanut butter"),
+            Text("Dinner: Beef stir-fry with vegetables and brown rice"),
+            SizedBox(height: 8),
+            Text("Thursday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole-grain waffles with sliced strawberries and yogurt"),
+            Text("Snack: Trail mix with nuts and dried fruit"),
+            Text(
+                "Lunch: Tuna salad with mixed greens, avocado, and cherry tomatoes"),
+            Text("Snack: Orange slices"),
+            Text(
+                "Dinner: Baked chicken with sweet potato and steamed broccoli"),
+            SizedBox(height: 8),
+            Text("Friday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Smoothie with Greek yogurt, banana, and mixed berries"),
+            Text("Snack: Edamame"),
+            Text(
+                "Lunch: Grilled shrimp salad with mixed greens, sliced cucumber, and tomato"),
+            Text("Snack: Cottage cheese with peach slices"),
+            Text(
+                "Dinner: Pork tenderloin with roasted vegetables and brown rice"),
+            SizedBox(height: 8),
+            Text("Saturday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole-grain pancakes with blueberries and Greek yogurt"),
+            Text("Snack: Almonds"),
+            Text(
+                "Lunch: Grilled chicken Caesar salad with whole-grain croutons"),
+            Text("Snack: Sliced mango"),
+            Text(
+                "Dinner: Grilled steak with baked potato and roasted asparagus"),
+            SizedBox(height: 8),
+            Text("Sunday:"),
+            SizedBox(height: 4),
+            Text("Breakfast: Whole-grain toast with avocado and poached egg"),
+            Text("Snack: String cheese"),
+            Text("Lunch: Grilled vegetable wrap with hummus and mixed greens"),
+            Text("Snack: Pineapple slices"),
+            Text(
+                "Dinner: Baked salmon with quinoa and roasted Brussels sprouts"),
+
+            SizedBox(height: 8),
+
+            //           Image.asset('assets/nutrition/second_trimester.png'),
+            SizedBox(height: 16),
+            Text(
+              'Third Trimester (Months 7-9):',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+
+            Text("Monday:"),
+            SizedBox(height: 4),
+            Text("Breakfast: Greek yogurt with granola and mixed berries"),
+            Text("Snack: Baby carrots with hummus"),
+            Text(
+                "Lunch: Grilled chicken sandwich with whole-grain bread, avocado, and tomato"),
+            Text("Snack: Orange slices"),
+            Text(
+                "Dinner: Baked salmon with roasted sweet potato and steamed green beans"),
+            SizedBox(height: 8),
+            Text("Tuesday:"),
+            SizedBox(height: 4),
+            Text("Breakfast: Oatmeal with sliced banana and walnuts"),
+            Text("Snack: String cheese"),
+            Text(
+                "Lunch: Tuna salad with mixed greens, cherry tomatoes, and whole-grain crackers"),
+            Text("Snack: Apple slices with almond butter"),
+            Text("Dinner: Beef stir-fry with vegetables and brown rice"),
+            SizedBox(height: 8),
+            Text("Wednesday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole-grain waffles with mixed berries and Greek yogurt"),
+            Text("Snack: Trail mix with nuts and dried fruit"),
+            Text(
+                "Lunch: Grilled chicken Caesar salad with whole-grain croutons"),
+            Text("Snack: Hard-boiled egg"),
+            Text("Dinner: Baked chicken with quinoa and roasted asparagus"),
+            SizedBox(height: 8),
+            Text("Thursday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Smoothie with Greek yogurt, banana, and mixed berries"),
+            Text("Snack: Edamame"),
+            Text(
+                "Lunch: Grilled shrimp salad with mixed greens, sliced cucumber, and tomato"),
+            Text("Snack: Pear slices with cheese"),
+            Text(
+                "Dinner: Pork tenderloin with roasted vegetables and brown rice"),
+            SizedBox(height: 8),
+            Text("Friday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Scrambled eggs with whole-grain toast and sliced avocado"),
+            Text("Snack: Greek yogurt with sliced peaches"),
+            Text("Lunch: Grilled vegetable wrap with hummus and mixed greens"),
+            Text("Snack: Baby carrots with ranch dressing"),
+            Text(
+                "Dinner: Baked salmon with quinoa and roasted Brussels sprouts"),
+            SizedBox(height: 8),
+            Text("Saturday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole-grain pancakes with blueberries and Greek yogurt"),
+            Text("Snack: Almonds"),
+            Text(
+                "Lunch: Turkey and avocado sandwich on whole-grain bread with sliced tomato"),
+            Text("Snack: Cottage cheese with pineapple slices"),
+            Text(
+                "Dinner: Grilled steak with baked potato and steamed green beans"),
+            SizedBox(height: 8),
+            Text("Sunday:"),
+            SizedBox(height: 4),
+            Text(
+                "Breakfast: Whole-grain toast with almond butter and sliced banana"),
+            Text("Snack: String cheese"),
+            Text(
+                "Lunch: Grilled chicken salad with mixed greens, cherry tomatoes, and avocado"),
+            Text("Snack: Mango slices"),
+            Text("Dinner: Vegetarian chili with brown rice and sliced avocado"),
+
+            SizedBox(height: 8),
+            //           Image.asset('assets/nutrition/third_trimester.png'),
+          ],
+        ),
       ),
     );
   }
@@ -498,7 +745,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => GotoEditPage()));
+                                        builder: (context) =>
+                                            const GotoEditPage()));
                               },
                               color: Colors.blueAccent,
                               child: const Icon(CupertinoIcons.pencil_outline),
@@ -684,7 +932,7 @@ class _GotoEditPageState extends State<GotoEditPage>
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  ProfileScreen()));
+                                                  const ProfileScreen()));
                                     },
                                     style: ElevatedButton.styleFrom(
                                         backgroundColor: const Color.fromRGBO(
