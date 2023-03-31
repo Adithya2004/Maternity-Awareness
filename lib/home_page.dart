@@ -261,26 +261,119 @@ class ExercisePage extends StatelessWidget {
             'It is important to engage in regular exercise throughout pregnancy to maintain fitness and prepare for childbirth. Here are some exercises you can do each month:',
             style: TextStyle(fontSize: 18),
           ),
+          SizedBox(
+            height: 16,
+          ),
+
+          Text(
+              "During pregnancy, exercise works wonder for both you and your baby. Exercise under the guidance of a trained supervisor helps you to gain confidence and stability during pregnancy.Our different exercise sessions help you tune your body well with pregnancy. We believe exercise is not just a single parent role, it involves the couple. So we train expecting dads also to help and support their partner during exercise sessions. Exercise during pregnancy is highly recommended by experts to have a healthier and happier pregnancy. Starting with pranayama, moving to other beautiful breathing exercise, learn to control and calm the mind as you go through your pregnancy. Meditation and relaxation techniques, Stress Management & relaxation techniques, Breathing patterns, Association of breathing with labour."),
           SizedBox(height: 16),
           Text(
-            'First Trimester (Months 1-3):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: 8),
-//           Image.asset('assets/exercises/first_trimester.png'),
-          SizedBox(height: 16),
+              "It's important for pregnant women to consult with their healthcare provider before starting any exercise routine, but there are several safe exercises that can be done during all three trimesters of pregnancy. Here are some examples:"),
+
           Text(
-            'Second Trimester (Months 4-6):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+              "Walking: A low-impact exercise that can be done throughout pregnancy, walking is a great way to stay active and improve cardiovascular health."),
           SizedBox(height: 8),
-//           Image.asset('assets/exercises/second_trimester.png'),
-          SizedBox(height: 16),
           Text(
-            'Third Trimester (Months 7-9):',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+              "Swimming: Swimming is a low-impact exercise that is easy on the joints and can help reduce swelling and discomfort."),
           SizedBox(height: 8),
+          Text(
+              "Prenatal yoga: Yoga can help improve flexibility, balance, and strength, as well as reduce stress and anxiety."),
+          SizedBox(height: 8),
+          Text(
+              "Low-impact aerobics: Low-impact aerobics, such as dancing or using an elliptical machine, can help improve cardiovascular health and increase endurance."),
+          SizedBox(height: 8),
+          Text(
+              "Kegels: Kegel exercises can help strengthen the pelvic floor muscles, which can help with urinary incontinence and prepare for childbirth."),
+          SizedBox(height: 8),
+          Text(
+              "It's important to listen to your body and avoid exercises that cause discomfort or pain. Pregnant women should also avoid exercises that involve lying flat on their back after the first trimester, as this can put pressure on the vena cava, a large vein that can affect blood flow to the fetus."),
+
+          SizedBox(height: 8),
+          Text(
+            "FAQ",
+            style: TextStyle(
+              fontSize: 30,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text("Q1 how much exercise should I do during pregnancy?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "We suggest a 30 min relaxing exercise should be enough to have a healthy baby. You don’t have to be exhausted by exercise to benefit from it. The goal is to build up to and keep a good level of fitness throughout your pregnancy."),
+          Text("Q2 Are there any risk of exercise while I am pregnant?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "We don't say that there are no risks at all. All women who exercise while pregnant should seek advice from their doctor or expert to ensure they are not overdoing it or engaging in specific activities that should be avoided."),
+
+          Text("Q3 what are the best cardio exercise for pregnant ladies?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Cardiovascular exercises such as walking, swimming, jogging, and stationary cycling are top picks during all three trimesters. Unless your doctor has told you to modify physical activity, you can join online exercise sessions and have a healthy pregnancy journey. "),
+
+          Text(
+              "Q4 what are the best strength and flexibility exercises that I can do ?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "This is a great time to focus on cardiovascular activities and keep up your mobility and abdominal strength with walking, swimming, prenatal yoga, pelvic floor exercises, bodyweight moves."),
+          SizedBox(
+            height: 10,
+          ),
+          Text("Correct breathing practice during pregnancy",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Starting with pranayam, moving to other beautiful breathing exercises, learn the art to control and calm the mind as you go through your pregnancy.We prepare you to breath and control your anxiety during pregnancy. We make sure that this phase becomes the most memorable and most enjoyable moment of your life."),
+          Text("Q1 how to manage my stress during pregnancy?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "One of the most common problems women go through during pregnancy is stress. You can easily manage the stress by meditating, paying attention on your breath and control yourself too . We will  train you well of all breathing techniques that can help you to come up with stress during pregnancy."),
+
+          Text("Q2 what is parental care?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Prenatal care is the health care you get while you are pregnant. Take care of yourself and your baby."),
+          Text("Q3 How often should I see my doctor during pregnancy?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Your doctor will give you a schedule of all the doctor's visits you should have while pregnant. Most experts suggest you see your doctor:"),
+          Text("•	About once each month for weeks 4 through 28"),
+          Text("•	Twice a month for weeks 28 through 36"),
+          Text("•	Weekly for weeks 36 to birth"),
+          Text(
+              "If you are older than 35 or your pregnancy is high risk, you'll probably see your doctor more often. "),
+          Text("Q4 What happens during parental visit?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "During the first prenatal visit, you can expect your doctor to:"),
+          Text(
+              "•	Ask about your health history including diseases, operations, or prior pregnancies"),
+          Text("•	Ask about your family's health history "),
+          Text(
+              "•	Do a complete physical exam, including a pelvic exam and Pap test "),
+          Text("•	Take your blood and urine for lab work "),
+          Text("•	Check your blood pressure, height, and weight "),
+          Text("•	Calculate your due date"),
+          Text("•	Answer your questions"),
+          Text(
+              "At the first visit, you should ask questions and discuss any issues related to your pregnancy. Find out all you can about how to stay healthy. "),
+          Text("Q5 How will I know when labor has started?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Some of the signs and symptoms of going into labor may include: period-like cramps, backache, diarrhoea, a small bloodstained discharge. As your cervix thins and the mucus plug drops out, a gush or trickle of water as the membranes break and Contractions start."),
+          Text("Q6 What are stages of labor?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text("There are 3 stages of Labor:"),
+          Text("First Stage – dilation of the cervix"),
+          Text("Second Stage – fully dilated till expulsion of the foetus"),
+          Text(
+              "Third stage – following expulsion of the foetus till the placenta and membranes are delivered."),
+          Text("Q7 How can I prepare myself before going to labor?",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+          Text(
+              "Using breathing techniques can help calm your nerves (before and after labor) and control the pain. You can practise all the way through pregnancy to ensure you’re comfortable using them when labor starts"),
+
 //           Image.asset('assets/exercises/third_trimester.png'),
         ],
       ),
@@ -315,7 +408,7 @@ class NutritionPage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            Text("Monday"),
+            Text("Monday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text("Breakfast: Greek yogurt with mixed berries and granola"),
             Text("Snack: Apple slices with almond butter"),
@@ -325,7 +418,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked salmon with roasted sweet potatoes and steamed broccoli"),
             SizedBox(height: 8),
-            Text("Tuesday"),
+            Text("Tuesday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Scrambled eggs with spinach and whole grain toast, and a glass of orange juice"),
@@ -335,7 +428,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Greek yogurt with sliced banana and honey"),
             Text("Dinner: Vegetarian chili with cornbread and a side salad"),
             SizedBox(height: 8),
-            Text("Wednesday"),
+            Text("Wednesday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole grain waffles with fresh fruit and a dollop of whipped cream, and a glass of milk"),
@@ -346,7 +439,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked chicken with roasted Brussels sprouts and a baked sweet potato"),
             SizedBox(height: 8),
-            Text("Thursday"),
+            Text("Thursday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Greek yogurt parfait with granola and mixed berries, and a glass of orange juice"),
@@ -357,7 +450,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked sweet potato with black beans, salsa, and a side salad"),
             SizedBox(height: 8),
-            Text("Friday"),
+            Text("Friday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Breakfast burrito with scrambled eggs, black beans, avocado, and salsa, and a glass of milk"),
@@ -367,7 +460,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Apple slices with cheese"),
             Text("Dinner: Spaghetti squash with meat sauce and a side salad"),
             SizedBox(height: 8),
-            Text("Saturday"),
+            Text("Saturday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Blueberry pancakes with a side of scrambled eggs and a glass of orange juice"),
@@ -376,7 +469,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Trail mix with dried fruit and nuts"),
             Text("Dinner: Beef stir-fry with mixed vegetables and brown rice"),
             SizedBox(height: 8),
-            Text("Sunday"),
+            Text("Sunday", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Veggie omelet with a side of whole grain toast and a glass of milk"),
@@ -396,7 +489,7 @@ class NutritionPage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 16),
-            Text("Monday:"),
+            Text("Monday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
 
             Text("Breakfast: Oatmeal with sliced banana and almonds"),
@@ -406,7 +499,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Apple slices with almond butter"),
             Text("Dinner: Grilled salmon with quinoa and roasted vegetables"),
             SizedBox(height: 8),
-            Text("Tuesday:"),
+            Text("Tuesday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Scrambled eggs with spinach and whole-grain toast"),
@@ -416,7 +509,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Pear slices with cheese"),
             Text("Dinner: Vegetarian chili with brown rice"),
             SizedBox(height: 8),
-            Text("Wednesday:"),
+            Text("Wednesday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text("Breakfast: Greek yogurt with granola and mixed berries"),
             Text("Snack: Hard-boiled egg"),
@@ -425,7 +518,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Banana with peanut butter"),
             Text("Dinner: Beef stir-fry with vegetables and brown rice"),
             SizedBox(height: 8),
-            Text("Thursday:"),
+            Text("Thursday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole-grain waffles with sliced strawberries and yogurt"),
@@ -436,7 +529,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked chicken with sweet potato and steamed broccoli"),
             SizedBox(height: 8),
-            Text("Friday:"),
+            Text("Friday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Smoothie with Greek yogurt, banana, and mixed berries"),
@@ -447,7 +540,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Pork tenderloin with roasted vegetables and brown rice"),
             SizedBox(height: 8),
-            Text("Saturday:"),
+            Text("Saturday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole-grain pancakes with blueberries and Greek yogurt"),
@@ -458,7 +551,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Grilled steak with baked potato and roasted asparagus"),
             SizedBox(height: 8),
-            Text("Sunday:"),
+            Text("Sunday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text("Breakfast: Whole-grain toast with avocado and poached egg"),
             Text("Snack: String cheese"),
@@ -477,7 +570,7 @@ class NutritionPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
 
-            Text("Monday:"),
+            Text("Monday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text("Breakfast: Greek yogurt with granola and mixed berries"),
             Text("Snack: Baby carrots with hummus"),
@@ -487,7 +580,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked salmon with roasted sweet potato and steamed green beans"),
             SizedBox(height: 8),
-            Text("Tuesday:"),
+            Text("Tuesday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text("Breakfast: Oatmeal with sliced banana and walnuts"),
             Text("Snack: String cheese"),
@@ -496,7 +589,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Apple slices with almond butter"),
             Text("Dinner: Beef stir-fry with vegetables and brown rice"),
             SizedBox(height: 8),
-            Text("Wednesday:"),
+            Text("Wednesday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole-grain waffles with mixed berries and Greek yogurt"),
@@ -506,7 +599,7 @@ class NutritionPage extends StatelessWidget {
             Text("Snack: Hard-boiled egg"),
             Text("Dinner: Baked chicken with quinoa and roasted asparagus"),
             SizedBox(height: 8),
-            Text("Thursday:"),
+            Text("Thursday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Smoothie with Greek yogurt, banana, and mixed berries"),
@@ -517,7 +610,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Pork tenderloin with roasted vegetables and brown rice"),
             SizedBox(height: 8),
-            Text("Friday:"),
+            Text("Friday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Scrambled eggs with whole-grain toast and sliced avocado"),
@@ -527,7 +620,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Baked salmon with quinoa and roasted Brussels sprouts"),
             SizedBox(height: 8),
-            Text("Saturday:"),
+            Text("Saturday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole-grain pancakes with blueberries and Greek yogurt"),
@@ -538,7 +631,7 @@ class NutritionPage extends StatelessWidget {
             Text(
                 "Dinner: Grilled steak with baked potato and steamed green beans"),
             SizedBox(height: 8),
-            Text("Sunday:"),
+            Text("Sunday:", style: TextStyle(fontWeight: FontWeight.bold)),
             SizedBox(height: 4),
             Text(
                 "Breakfast: Whole-grain toast with almond butter and sliced banana"),
@@ -607,7 +700,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 100,),
+                        const SizedBox(
+                          height: 100,
+                        ),
                         const Center(
                           child: Text(
                             "PROFILE",
@@ -648,7 +743,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                         const SizedBox(
                           height: 20.0,
                         ),
-
 
                         //First_name
                         Row(
