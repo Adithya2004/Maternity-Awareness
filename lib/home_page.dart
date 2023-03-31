@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import './accordion.dart';
 
 class Usermodel {
   final String? id;
@@ -113,27 +114,28 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _children[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        fixedColor: Colors.blueAccent,
+        unselectedItemColor: Colors.white, //: Colors.blueAccent,
+        selectedItemColor: Colors.yellow,
         onTap: onTabTapped,
         currentIndex: _currentIndex,
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.grey,
+            backgroundColor: Color.fromARGB(255, 103, 111, 255),
             icon: Icon(Icons.dashboard),
             label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.grey,
+            backgroundColor: Color.fromARGB(255, 103, 111, 255),
             icon: Icon(Icons.fitness_center),
             label: 'Exercise',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.grey,
+            backgroundColor: Color.fromARGB(255, 103, 111, 255),
             icon: Icon(Icons.restaurant_menu),
             label: 'Nutrition',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.grey,
+            backgroundColor: Color.fromARGB(255, 103, 111, 255),
             icon: Icon(Icons.info),
             label: 'Profile',
           ),
@@ -299,25 +301,26 @@ class ExercisePage extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Text("Q1 how much exercise should I do during pregnancy?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "We suggest a 30 min relaxing exercise should be enough to have a healthy baby. You don’t have to be exhausted by exercise to benefit from it. The goal is to build up to and keep a good level of fitness throughout your pregnancy."),
-          Text("Q2 Are there any risk of exercise while I am pregnant?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "We don't say that there are no risks at all. All women who exercise while pregnant should seek advice from their doctor or expert to ensure they are not overdoing it or engaging in specific activities that should be avoided."),
+          Accordion(
+              title: "Q1 how much exercise should I do during pregnancy?",
+              content:
+                  "We suggest a 30 min relaxing exercise should be enough to have a healthy baby. You don’t have to be exhausted by exercise to benefit from it. The goal is to build up to and keep a good level of fitness throughout your pregnancy."),
+          Accordion(
+              title: "Q2 Are there any risk of exercise while I am pregnant?",
+              content:
+                  "We don't say that there are no risks at all. All women who exercise while pregnant should seek advice from their doctor or expert to ensure they are not overdoing it or engaging in specific activities that should be avoided."),
 
-          Text("Q3 what are the best cardio exercise for pregnant ladies?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "Cardiovascular exercises such as walking, swimming, jogging, and stationary cycling are top picks during all three trimesters. Unless your doctor has told you to modify physical activity, you can join online exercise sessions and have a healthy pregnancy journey. "),
+          Accordion(
+              title:
+                  "Q3 what are the best cardio exercise for pregnant ladies?",
+              content:
+                  "Cardiovascular exercises such as walking, swimming, jogging, and stationary cycling are top picks during all three trimesters. Unless your doctor has told you to modify physical activity, you can join online exercise sessions and have a healthy pregnancy journey. "),
 
-          Text(
-              "Q4 what are the best strength and flexibility exercises that I can do ?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "This is a great time to focus on cardiovascular activities and keep up your mobility and abdominal strength with walking, swimming, prenatal yoga, pelvic floor exercises, bodyweight moves."),
+          Accordion(
+              title:
+                  "Q4 what are the best strength and flexibility exercises that I can do ?",
+              content:
+                  "This is a great time to focus on cardiovascular activities and keep up your mobility and abdominal strength with walking, swimming, prenatal yoga, pelvic floor exercises, bodyweight moves."),
           SizedBox(
             height: 10,
           ),
@@ -325,54 +328,49 @@ class ExercisePage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           Text(
               "Starting with pranayam, moving to other beautiful breathing exercises, learn the art to control and calm the mind as you go through your pregnancy.We prepare you to breath and control your anxiety during pregnancy. We make sure that this phase becomes the most memorable and most enjoyable moment of your life."),
-          Text("Q1 how to manage my stress during pregnancy?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "One of the most common problems women go through during pregnancy is stress. You can easily manage the stress by meditating, paying attention on your breath and control yourself too . We will  train you well of all breathing techniques that can help you to come up with stress during pregnancy."),
+          Accordion(
+              title: "Q1 how to manage my stress during pregnancy?",
+              content:
+                  "One of the most common problems women go through during pregnancy is stress. You can easily manage the stress by meditating, paying attention on your breath and control yourself too . We will  train you well of all breathing techniques that can help you to come up with stress during pregnancy."),
 
-          Text("Q2 what is parental care?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "Prenatal care is the health care you get while you are pregnant. Take care of yourself and your baby."),
-          Text("Q3 How often should I see my doctor during pregnancy?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "Your doctor will give you a schedule of all the doctor's visits you should have while pregnant. Most experts suggest you see your doctor:"),
-          Text("•	About once each month for weeks 4 through 28"),
-          Text("•	Twice a month for weeks 28 through 36"),
-          Text("•	Weekly for weeks 36 to birth"),
-          Text(
-              "If you are older than 35 or your pregnancy is high risk, you'll probably see your doctor more often. "),
-          Text("Q4 What happens during parental visit?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "During the first prenatal visit, you can expect your doctor to:"),
-          Text(
-              "•	Ask about your health history including diseases, operations, or prior pregnancies"),
-          Text("•	Ask about your family's health history "),
-          Text(
-              "•	Do a complete physical exam, including a pelvic exam and Pap test "),
-          Text("•	Take your blood and urine for lab work "),
-          Text("•	Check your blood pressure, height, and weight "),
-          Text("•	Calculate your due date"),
-          Text("•	Answer your questions"),
-          Text(
-              "At the first visit, you should ask questions and discuss any issues related to your pregnancy. Find out all you can about how to stay healthy. "),
-          Text("Q5 How will I know when labor has started?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "Some of the signs and symptoms of going into labor may include: period-like cramps, backache, diarrhoea, a small bloodstained discharge. As your cervix thins and the mucus plug drops out, a gush or trickle of water as the membranes break and Contractions start."),
-          Text("Q6 What are stages of labor?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text("There are 3 stages of Labor:"),
-          Text("First Stage – dilation of the cervix"),
-          Text("Second Stage – fully dilated till expulsion of the foetus"),
-          Text(
-              "Third stage – following expulsion of the foetus till the placenta and membranes are delivered."),
-          Text("Q7 How can I prepare myself before going to labor?",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          Text(
-              "Using breathing techniques can help calm your nerves (before and after labor) and control the pain. You can practise all the way through pregnancy to ensure you’re comfortable using them when labor starts"),
+          Accordion(
+              title: "Q2 what is parental care?",
+              content:
+                  "Prenatal care is the health care you get while you are pregnant. Take care of yourself and your baby."),
+          Accordion(
+              title: "Q3 How often should I see my doctor during pregnancy?",
+              content:
+                  "Your doctor will give you a schedule of all the doctor's visits you should have while pregnant. Most experts suggest you see your doctor:"
+                  "•	About once each month for weeks 4 through 28\n"
+                  "•	Twice a month for weeks 28 through 36\n"
+                  "•	Weekly for weeks 36 to birth\n"
+                  "If you are older than 35 or your pregnancy is high risk, you'll probably see your doctor more often. "),
+          Accordion(
+              title: "Q4 What happens during parental visit?",
+              content:
+                  "During the first prenatal visit, you can expect your doctor to: \n"
+                  "•	Ask about your health history including diseases, operations, or prior pregnancies\n"
+                  "•	Ask about your family's health history \n"
+                  "•	Do a complete physical exam, including a pelvic exam and Pap test \n"
+                  "•	Take your blood and urine for lab work \n"
+                  "•	Check your blood pressure, height, and weight \n"
+                  "•	Calculate your due date\n"
+                  "•	Answer your questions\n"
+                  "At the first visit, you should ask questions and discuss any issues related to your pregnancy. Find out all you can about how to stay healthy. "),
+          Accordion(
+              title: "Q5 How will I know when labor has started?",
+              content:
+                  "Some of the signs and symptoms of going into labor may include: period-like cramps, backache, diarrhoea, a small bloodstained discharge. As your cervix thins and the mucus plug drops out, a gush or trickle of water as the membranes break and Contractions start."),
+          Accordion(
+              title: "Q6 What are stages of labor?",
+              content: "There are 3 stages of Labor:\n"
+                  "First Stage – dilation of the cervix\n"
+                  "Second Stage – fully dilated till expulsion of the foetus\n"
+                  "Third stage – following expulsion of the foetus till the placenta and membranes are delivered."),
+          Accordion(
+              title: "Q7 How can I prepare myself before going to labor?",
+              content:
+                  "Using breathing techniques can help calm your nerves (before and after labor) and control the pain. You can practise all the way through pregnancy to ensure you’re comfortable using them when labor starts"),
 
 //           Image.asset('assets/exercises/third_trimester.png'),
         ],
